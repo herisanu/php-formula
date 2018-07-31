@@ -19,6 +19,9 @@ php_install_fpm71:
     - pkgs:
       - rh-php71-php-fpm
       - rh-php71-php-pgsql
+    - require:
+      - pkgrepo: repo_centos_scl_scl
+      - pkgrepo: repo_centos_scl_rh
 
 php_remove_old_php_version:
   pkg.removed:
